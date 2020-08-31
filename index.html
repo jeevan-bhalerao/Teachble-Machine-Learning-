@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachable Machine Using TensorFlow JS</title>
+
+    <!-- Load the latest version of TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <!-- Load the MobileNet model -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+    <!-- Load KNN Classifier model -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
+
+    <!-- We will use some Bootstrap to style our page easily -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/custom_styles.css"/>
+
+</head>
+
+<body class="Background-color">
+
+    <!-- Add a Navbar with a title -->
+    <div class="header-color">Teachable Machine Learning
+
+    </div>
+    <!-- Wrap everything into a container -->
+    <div>
+        <!-- We will add a console area to display the prediction of the model -->
+        <div class="row d-flex justify-content-center text-center">
+            <strong>
+                <div class="col" id="console"></div>
+            </strong>
+        </div>
+        <!-- Add a window to display the video from the webcam -->
+        <div class="row d-flex justify-content-center text-center">
+            <video class="col m-4 p-1" autoplay playsinline muted id="webcam" width="224" height="224"></video>
+        </div>
+        <!-- Add three buttons and text boxes for adding training images -->
+        <div class="row d-flex justify-content-center text-center">
+            <div class="col-sm m-2">
+                <button class="btn btn-primary" id="class-a">Add A</button>
+                <input type="text" placeholder="Enter label for object A" id="a">
+            </div>
+            <div class="col-sm m-2">
+                <button class="btn btn-primary" id="class-b">Add B</button>
+                <input type="text" placeholder="Enter label for object B" id="b">
+            </div>
+            <div class="col-sm m-2">
+                <button class="btn btn-primary" id="class-c">Add C</button>
+                <input type="text" placeholder="Enter label for object C" id="c">
+            </div>
+        </div>
+    </div>
+    <!-- Load script.js after the page content has been loaded -->
+    <script src="script.js"></script>
+</body>
+
+</html>
